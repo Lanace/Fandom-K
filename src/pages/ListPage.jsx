@@ -11,9 +11,10 @@ import VoteModal from "../components/MonthList/components/VoteModal";
 import ChargeCreditModal from "../components/Modal/ChargeCreditModal";
 import Footer from "../components/Footer/Footer";
 import useDevice from "../hooks/useDevice"; // 미디어 쿼리
-import backgroundImg from "../assets/images/Vector 3.png";
 import "react-toastify/dist/ReactToastify.css"; // 스타일 추가
 import { toast, ToastContainer } from "react-toastify";
+import MyPage from "./MyPage/MyPage";
+import LandingPage from "./LandingPage/LandingPage";
 
 function ListPage() {
   const [modalContents, setModalContents] = useState(); // 모달 타입
@@ -104,6 +105,7 @@ function ListPage() {
       setVoteData(null);
     }, 200);
   };
+
   // 모달 내용 선택
   function ModalContents({ modalContents }) {
     switch (modalContents) {
@@ -116,23 +118,9 @@ function ListPage() {
           />
         );
       case 2:
-        return (
-          <VoteModal
-            data={voteData}
-            gender={gender}
-            notifyWarn={notifyWarn}
-            notifyError={notifyError}
-            notifySuccess={notifySuccess}
-          />
-        );
+        return <MyPage />;
       case 4:
-        return (
-          <ChargeCreditModal
-            onCharge={handleCharge}
-            notifyCharge={notifyCharge}
-            onClose={handleDeleteModal}
-          />
-        );
+        return <LandingPage />;
       default:
         return null;
     }
@@ -141,7 +129,6 @@ function ListPage() {
   return (
     <div>
       {/* 배경 설정 */}
-      <img style={{ position: "absolute", zIndex: "99" }} src={backgroundImg} />
       <Header />
       <MyCredit
         handleMyCreditModal={handleMyCreditModal}

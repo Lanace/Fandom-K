@@ -12,7 +12,6 @@ import CustomButton from "../../components/CustomButtom/CustomButton";
 import Refresh from "../../components/Refresh/Refresh";
 import { ToastContainer, toast } from "react-toastify";
 import Footer from "../../components/Footer/Footer";
-import backgroundImg from "../../assets/images/Vector 3.png";
 import MyPageLoading from "./MyPageLoading";
 
 function MyPage() {
@@ -307,11 +306,6 @@ function MyPage() {
   return (
     <div>
       <Header />
-      <img
-        style={{ position: "absolute", top: "0", zIndex: "9" }}
-        src={backgroundImg}
-        alt="배경그라데이션"
-      />
       <main className={styles.mypage__main}>
         <section className={styles.favorite_section}>
           <h2 className={styles.section__title}>내가 관심있는 아이돌</h2>

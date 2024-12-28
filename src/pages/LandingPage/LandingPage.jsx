@@ -1,7 +1,6 @@
 import React from "react";
 import "../../styles/color.scss";
 import "../../styles/font.scss";
-import logonobackground from "../../assets/images/logonobackground.svg";
 import styles from "./LandingPageStyles.module.scss";
 import Section from "../../components/LandingPage/Sections.jsx";
 import images from "../../components/LandingPage/LandingPageImages.jsx";
@@ -21,9 +20,8 @@ function LandingPage() {
   return (
     <EdgeGradient>
       <div>
-      
         <div className={styles["gradient-bar"]}></div>
-   
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +31,6 @@ function LandingPage() {
             duration: 2,
           }}
         >
-
           <div className={styles.page1}>
             <div className={styles.background}>
               <div className={styles.page1}>
@@ -49,14 +46,6 @@ function LandingPage() {
                   </h1>
                 </div>
                 <div className={styles["image-container"]}>
-                  <img
-                    onClick={() => {
-                      navigate("/list");
-                    }}
-                    className={styles.logo}
-                    src={logonobackground}
-                    alt="logo"
-                  />
                   <img
                     className={styles.backgroundimg}
                     src={images.bgimg1}

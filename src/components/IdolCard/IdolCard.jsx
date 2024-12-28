@@ -23,7 +23,7 @@ function IdolCard({
         <div className={styles.add_idol_image_container}>
           <img src={clickIcon} className={styles.click_icon} />
           <img
-            src={imageUrl}
+            src={imageUrl || "default Image"}
             className={`${styles.add_idol_image_clicked} ${
               isbig ? styles.big : styles.small
             }`}

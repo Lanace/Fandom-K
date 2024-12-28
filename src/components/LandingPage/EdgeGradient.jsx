@@ -3,6 +3,7 @@ import styles from "./EdgeGradient.module.scss";
 import images from "./LandingPageImages.jsx";
 
 const EdgeGradient = ({ children }) => {
+
   return (
     <div className={styles.wrapper}>
       <img className={styles.edgegradient} src={images.edgevector} />
